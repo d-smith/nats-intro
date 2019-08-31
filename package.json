@@ -1,0 +1,14 @@
+{
+  "name": "nats-intro-accounts",
+  "version": "1.0.0",
+  "description": "## accounts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "nats": "^1.3.0"
+  }
+}
