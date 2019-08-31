@@ -8,6 +8,9 @@ nc.on('connect', () => {
 
     console.log('publish private foo');
     nc.publish('foo','Private foo from A');
+
+    console.log('publish public foo');
+    nc.publish('puba.foo','Public foo from A');
 });
 
 nc.flush(() => {
