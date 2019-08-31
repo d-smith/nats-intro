@@ -1,0 +1,34 @@
+
+
+accounts: {
+    A: {
+        users: [
+            {user: a, password: a}
+        ]
+        exports: [
+            {stream: puba.>}
+            {stream: b.>, accounts [B]}
+        ]
+    },
+    B: {
+        users: [
+            {user:b, password: b}
+        ]
+        exports: [
+            {service: pubq.>}
+        ]
+        imports: [
+            {stream: {account: A, subject: b.>}}
+            {stream: {account: A, subject: puba.>}}
+        ]
+    },
+    C: {
+        users: [
+            {user: c, password: c}
+        ]
+        imports: [
+            {stream: {account: A, subject: puba.>}, prefix: from_a}
+            {service: {account: B, subject: pubq.C}, to: Q}
+        ]
+    }
+}
