@@ -6,3 +6,4 @@ const subscriberFn = (msg,_,subject) => {
 }
 
 nats.subscribe('puba.foo', subscriberFn);
+nats.subscribe('pubq.>', subscriberFn);
